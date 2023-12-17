@@ -1,104 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Tic-Tac-Toe</title>
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <script src="./script.js" defer></script>
-  </head>
-  <body
-    class="bg-[url('https://media.istockphoto.com/id/1292919739/vector/tic-tac-toe-school-game-colorful-seamless-pattern-for-fabric-and-print-on-the-paper.jpg?s=612x612&w=0&k=20&c=Q4gMspKHffPmhKuofb_Rb_WCD8uAgbsbXSKuWEcziM8=')] bg-cover bg-no-repeat"
-  >
+</head>
+
+<body class="bg-cover bg-no-repeat" style="background-image: url('Untitled design (2).png');">
     <section class="mt-10">
-      <div class="flex justify-center w-full">
-        <div
-          class="flex flex-col bg-[#d7d7d71a] backdrop-blur-sm w-auto rounded-lg shadow-lg px-12 py-6"
-        >
-          <div class="flex justify-center mb-16">
-            <h1 class="text-5xl text-gray-50 font-mono font-semibold">
-              TIC TAC TOE
-            </h1>
-          </div>
+        <div class="flex justify-center w-full">
+            <div class="flex flex-col bg-[#000000e2] backdrop-blur-sm w-auto rounded-lg shadow-lg px-12 py-6">
+                <div class="flex justify-center mb-16">
+                    <h1 class="text-5xl text-gray-50 font-mono font-semibold">
+                        TIC TAC TOE
+                    </h1>
+                </div>
 
-          <div class="flex justify-center mb-6">
-            <h1 id="turn" class="text-xl text-gray-50 font-mono font-semibold">
-              Player O's Turn
-            </h1>
-          </div>
+                <div class="flex justify-center mb-6">
+                    <h1 id="turn" class="text-xl text-gray-50 font-mono font-semibold">
+                        Player O's Turn
+                    </h1>
+                </div>
 
-          <div class="flex justify-center mb-10" id="grid">
-            <div
-              class="grid grid-cols-3 text-gray-50 text-6xl font-mono font-bold"
-            >
-              <span
-                class="flex justify-center items-center border-r-2 border-b-2 border-gray-50 w-24 h-24"
-                id="box1"
-                onclick="onInput(1)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-r-2 border-l-2 border-b-2 border-gray-50 w-24 h-24"
-                id="box2"
-                onclick="onInput(2)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-l-2 border-b-2 border-gray-50 w-24 h-24"
-                id="box3"
-                onclick="onInput(3)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-t-2 border-r-2 border-b-2 border-gray-50 w-24 h-24"
-                id="box4"
-                onclick="onInput(4)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-2 border-gray-50 w-24 h-24"
-                id="box5"
-                onclick="onInput(5)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-t-2 border-l-2 border-b-2 border-gray-50 w-24 h-24"
-                id="box6"
-                onclick="onInput(6)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-t-2 border-r-2 border-gray-50 w-24 h-24"
-                id="box7"
-                onclick="onInput(7)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-r-2 border-l-2 border-t-2 border-gray-50 w-24 h-24"
-                id="box8"
-                onclick="onInput(8)"
-                >-</span
-              >
-              <span
-                class="flex justify-center items-center border-t-2 border-l-2 border-gray-50 w-24 h-24"
-                id="box9"
-                onclick="onInput(9)"
-                >-</span
-              >
+                <div class="flex justify-center mb-10" id="grid">
+                    <div class="grid grid-cols-3 text-gray-50 text-6xl font-mono font-bold">
+                        <span class="flex justify-center items-center border-r-2 border-b-2 border-gray-50 w-24 h-24"
+                            id="box1" onclick="onInput(1)">-</span>
+                        <span
+                            class="flex justify-center items-center border-r-2 border-l-2 border-b-2 border-gray-50 w-24 h-24"
+                            id="box2" onclick="onInput(2)">-</span>
+                        <span class="flex justify-center items-center border-l-2 border-b-2 border-gray-50 w-24 h-24"
+                            id="box3" onclick="onInput(3)">-</span>
+                        <span
+                            class="flex justify-center items-center border-t-2 border-r-2 border-b-2 border-gray-50 w-24 h-24"
+                            id="box4" onclick="onInput(4)">-</span>
+                        <span class="flex justify-center items-center border-2 border-gray-50 w-24 h-24" id="box5"
+                            onclick="onInput(5)">-</span>
+                        <span
+                            class="flex justify-center items-center border-t-2 border-l-2 border-b-2 border-gray-50 w-24 h-24"
+                            id="box6" onclick="onInput(6)">-</span>
+                        <span class="flex justify-center items-center border-t-2 border-r-2 border-gray-50 w-24 h-24"
+                            id="box7" onclick="onInput(7)">-</span>
+                        <span
+                            class="flex justify-center items-center border-r-2 border-l-2 border-t-2 border-gray-50 w-24 h-24"
+                            id="box8" onclick="onInput(8)">-</span>
+                        <span class="flex justify-center items-center border-t-2 border-l-2 border-gray-50 w-24 h-24"
+                            id="box9" onclick="onInput(9)">-</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button type="reset" class="bg-yellow-400 px-4 py-1 rounded-md font-mono font-bold text-lg"
+                        onclick="onReset()">
+                        Reset
+                    </button>
+                </div>
             </div>
-          </div>
-          <div class="flex justify-center">
-            <button
-              type="reset"
-              class="bg-yellow-400 px-4 py-1 rounded-md font-mono font-bold text-lg"
-              onclick="onReset()"
-            >
-              Reset
-            </button>
-          </div>
         </div>
-      </div>
     </section>
-  </body>
+</body>
+
 </html>
