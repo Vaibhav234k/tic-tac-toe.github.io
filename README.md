@@ -6,7 +6,8 @@ Tic Tac Toe is a classic game that is easy to play and fun for all ages. This we
 
 ## **How to work with this Project:**
 1) Setup the `Tailwindcss` in the 📁 ( If you dont know how to setup just click on this 🔗: https://github.com/Saubhagya122k4/Tailwind-CSS/blob/main/README.md )
-2) Download the ZIP File that is present in the repo or jsut click the link to download ⇩ : [Tic-Tac-Toe.zip](https://github.com/Vaibhav234k/tic-tac-toe.github.io/files/13696598/Tic-Tac-Toe.zip)
+2) Download the ZIP File that is present in the repo or jsut click the link to download ⇩ : [Tic-Tac-Toe.zip](https://github.com/Vaibhav234k/tic-tac-toe.github.io/files/13704451/Tic-Tac-Toe.zip)
+
 3) Unzip the Pixel Art 📁 in the created folder and add the files.
 4) And you are ready to work with the project.
    
