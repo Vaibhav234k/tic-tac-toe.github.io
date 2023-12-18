@@ -3,19 +3,23 @@ var turntext = document.getElementById("turn");
 if (turn) turntext.innerText = "Player O's Turn";
 else turntext.innerHTML = "Player X's Turn";
 console.log(turn);
+var filledBoxes = 0; // Add this line to keep track of filled boxes
 
 function onReset() {
   turn = Math.floor(Math.random() * 2);
   if (turn) turntext.innerText = "Player O's Turn";
   else turntext.innerHTML = "Player X's Turn";
+  filledBoxes = 0; // Reset the counter on reset
   for (let i = 1; i < 10; i++) {
     var box = (document.getElementById("box" + i).innerText = "-");
   }
 }
+
 function onInput(number) {
   var box = document.getElementById("box" + number);
   if (!checkResult())
     if (box.innerHTML == "-") {
+      filledBoxes++; // Increase the counter when a box is filled
       if (turn == 1) {
         box.innerHTML = "O";
         turntext.innerText = "Player X's Turn";
@@ -29,8 +33,11 @@ function onInput(number) {
   if (checkResult()) {
     if (turn) turntext.innerText = "Player X won";
     else turntext.innerText = "Player O won";
+  } else if (filledBoxes == 9) { // If all boxes are filled and no one has won, it's a draw
+    turntext.innerText = "It's a draw";
   }
 }
+
 function checkResult() {
   var boxvalue = [null, null, null, null, null, null, null, null, null];
   const check_line = (a, b, c) => {
